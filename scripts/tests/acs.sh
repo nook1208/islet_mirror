@@ -11,7 +11,7 @@ UART=$ROOT/out/uart2.log
 
 [ -e $UART ] && rm $UART
 
-$ROOT/scripts/fvp-cca -bo -nw=acs --rmm-log-level=error --excluded-tests=skipped-tests.txt
+$ROOT/scripts/fvp-cca -bo -nw=acs --stat --excluded-tests=skipped-tests.txt
 $ROOT/scripts/fvp-cca -ro -nw=acs --no-telnet &
 
 sleep 30
